@@ -1,0 +1,18 @@
+# cURL Command:
+curl -X GET http://127.0.0.1:8000/djangoapp/get_dealers \
+  -H "Content-Type: application/json"
+
+# Output:
+{
+  "status": 200,
+  "dealers": [
+    {"id": 1, "full_name": "Cars Dealership - Manhattan", "city": "New York", "state": "New York", "st": "NY", "address": "1200 Motor Pkwy", "zip": "10001"},
+    {"id": 2, "full_name": "Cars Dealership - Wichita", "city": "Wichita", "state": "Kansas", "st": "KS", "address": "450 Commerce St", "zip": "67202"},
+    {"id": 3, "full_name": "Cars Dealership - Kansas City", "city": "Kansas City", "state": "Kansas", "st": "KS", "address": "880 Oak Blvd", "zip": "66101"},
+    {"id": 4, "full_name": "Cars Dealership - Los Angeles", "city": "Los Angeles", "state": "California", "st": "CA", "address": "4500 Sunset Blvd", "zip": "90028"},
+    {"id": 5, "full_name": "Cars Dealership - Houston", "city": "Houston", "state": "Texas", "st": "TX", "address": "200 Texas Ave", "zip": "77001"},
+    {"id": 6, "full_name": "Cars Dealership - Chicago", "city": "Chicago", "state": "Illinois", "st": "IL", "address": "300 Lake Shore Dr", "zip": "60601"},
+    {"id": 7, "full_name": "Cars Dealership - Phoenix", "city": "Phoenix", "state": "Arizona", "st": "AZ", "address": "1800 Desert Rd", "zip": "85001"},
+    {"id": 8, "full_name": "Cars Dealership - Seattle", "city": "Seattle", "state": "Washington", "st": "WA", "address": "900 Pine St", "zip": "98101"}
+  ]
+}

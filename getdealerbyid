@@ -1,0 +1,19 @@
+# cURL Command:
+curl -X GET http://127.0.0.1:8000/djangoapp/dealer/1 \
+  -H "Content-Type: application/json"
+
+# Output:
+{
+  "status": 200,
+  "dealer": {
+    "id": 1,
+    "full_name": "Cars Dealership - Manhattan",
+    "city": "New York",
+    "state": "New York",
+    "st": "NY",
+    "address": "1200 Motor Pkwy",
+    "zip": "10001",
+    "lat": "40.7128",
+    "long": "-74.0060"
+  }
+}

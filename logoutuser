@@ -1,0 +1,7 @@
+# cURL Command:
+curl -X GET http://127.0.0.1:8000/djangoapp/logout \
+  -H "Content-Type: application/json" \
+  -b cookies.txt
+
+# Output:
+{"userName": "testuser"}

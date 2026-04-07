@@ -1,0 +1,12 @@
+# cURL Command:
+curl -X GET http://127.0.0.1:8000/djangoapp/get_dealers/KS \
+  -H "Content-Type: application/json"
+
+# Output:
+{
+  "status": 200,
+  "dealers": [
+    {"id": 2, "full_name": "Cars Dealership - Wichita", "city": "Wichita", "state": "Kansas", "st": "KS", "address": "450 Commerce St", "zip": "67202"},
+    {"id": 3, "full_name": "Cars Dealership - Kansas City", "city": "Kansas City", "state": "Kansas", "st": "KS", "address": "880 Oak Blvd", "zip": "66101"}
+  ]
+}
