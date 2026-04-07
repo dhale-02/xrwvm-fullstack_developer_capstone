@@ -20,6 +20,9 @@ This is the IBM Full-Stack Developer Capstone Project. The application is a resp
 - Admin panel for managing data
 - Fully deployed on IBM Cloud Code Engine
 
+## CI/CD Status
+![CI/CD](https://github.com/dhale-02/xrwvm-fullstack_developer_capstone/actions/workflows/ci-cd.yml/badge.svg)
+
 ## Project Structure
 ```
 ├── server/
@@ -32,5 +35,5 @@ This is the IBM Full-Stack Developer Capstone Project. The application is a resp
 ```
 
 ## Author
-**Dhale Glen Caparros** 
+**Dhale Glen Caparros**  
 GitHub: [dhale-02](https://github.com/dhale-02)
