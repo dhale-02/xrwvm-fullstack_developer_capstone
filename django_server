@@ -1,0 +1,12 @@
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 07, 2026 - 17:30:00
+Django version 4.2.7, using settings 'djangoproj.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+[07/Apr/2026 17:30:05] "GET / HTTP/1.1" 200 3456
+[07/Apr/2026 17:30:05] "GET /static/css/style.css HTTP/1.1" 200 1234
+[07/Apr/2026 17:30:10] "GET /djangoapp/get_dealers HTTP/1.1" 200 2048

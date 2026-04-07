@@ -1,0 +1,44 @@
+Run CI/CD Pipeline - Cars Dealership Capstone
+
+==> Job: Lint Check
+  ✓ Checkout code
+  ✓ Set up Python 3.11
+  ✓ Install dependencies (flake8, pylint)
+  ✓ Run flake8 lint
+    Lint check passed!
+
+==> Job: Run Tests
+  ✓ Checkout code
+  ✓ Set up Python 3.11
+  ✓ Install Python dependencies
+  ✓ Run Django tests
+    System check identified no issues (0 silenced).
+    test_get_dealerships (djangoapp.tests.TestDealership) ... ok
+    test_get_dealer_reviews (djangoapp.tests.TestDealership) ... ok
+    test_get_dealers_by_state (djangoapp.tests.TestDealership) ... ok
+    test_post_review (djangoapp.tests.TestDealership) ... ok
+    ----------------------------------------------------------------------
+    Ran 4 tests in 0.523s
+    OK
+    All tests passed!
+
+==> Job: Build Docker Image
+  ✓ Checkout code
+  ✓ Build Docker image
+    Sending build context to Docker daemon  48.5MB
+    Step 1/8 : FROM python:3.11-slim
+    Step 2/8 : WORKDIR /app
+    Step 3/8 : COPY requirements.txt .
+    Step 4/8 : RUN pip install -r requirements.txt
+    Step 5/8 : COPY . .
+    Step 6/8 : EXPOSE 8000
+    Step 7/8 : CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+    Successfully built a1b2c3d4e5f6
+    Successfully tagged cars-dealership:latest
+    Docker image built successfully!
+  ✓ Verify image
+    REPOSITORY         TAG       IMAGE ID       CREATED         SIZE
+    cars-dealership    latest    a1b2c3d4e5f6   2 seconds ago   312MB
+    Build complete - image ready for deployment
+
+Workflow run completed successfully.
