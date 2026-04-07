@@ -50,11 +50,20 @@ def add_review(request):
         if not request.user.is_anonymous:
             try:
                 data = json.loads(request.body)
-                review = data.get('review', data)
-                review['id'] = len(MOCK_REVIEWS) + 1
-                review['sentiment'] = 'positive'
+                review = {
+                    'id': len(MOCK_REVIEWS) + 1,
+                    'name': data.get('name', 'Anonymous'),
+                    'dealership': data.get('dealership'),
+                    'review': data.get('review', ''),
+                    'purchase': data.get('purchase', False),
+                    'purchase_date': data.get('purchase_date', ''),
+                    'car_make': data.get('car_make', ''),
+                    'car_model': data.get('car_model', ''),
+                    'car_year': data.get('car_year', 0),
+                    'sentiment': 'positive',
+                }
                 MOCK_REVIEWS.append(review)
-                return JsonResponse({'status': 200, 'message': 'Review added successfully'})
+                return JsonResponse({'status': 200, 'message': 'Review added successfully', 'review': review})
             except Exception as e:
                 return JsonResponse({'status': 500, 'error': str(e)})
         return JsonResponse({'status': 403, 'message': 'Unauthorized - please login first'})
